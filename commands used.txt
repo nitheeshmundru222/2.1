@@ -1,0 +1,36 @@
+1) create db
+use Nitheesh
+
+2) create and insert collection
+
+db.Players.insertMany([{playerName:"Isaac Alarcon",rushingYards:1000,touchDowns:200,sacks:100,goalsMade:100,goalsMissed:30,catchesMade:20},
+{playerName:"Bryan Anger",rushingYards:1200,touchDowns:300,sacks:700,goalsMade:200,goalsMissed:10,catchesMade:490},
+{playerName:"Dorance Armstrong",rushingYards:1700,touchDowns:2100,sacks:1100,goalsMade:1200,goalsMissed:70,catchesMade:210},
+{playerName:"Josh Ball",rushingYards:1800,touchDowns:2800,sacks:1200,goalsMade:1100,goalsMissed:130,catchesMade:120},
+{playerName:"Jose Barbon",rushingYards:1900,touchDowns:2900,sacks:900,goalsMade:1900,goalsMissed:930,catchesMade:290},
+{playerName:"T.J. Bass",rushingYards:1600,touchDowns:260,sacks:160,goalsMade:600,goalsMissed:360,catchesMade:206},
+{playerName:"Markquese Bell",rushingYards:4100,touchDowns:2400,sacks:140,goalsMade:104,goalsMissed:430,catchesMade:420},
+{playerName:"Tyler Biadasz",rushingYards:1010,touchDowns:2010,sacks:1001,goalsMade:1001,goalsMissed:301,catchesMade:201},
+{playerName:"DaRon Bland",rushingYards:1050,touchDowns:2060,sacks:1060,goalsMade:1006,goalsMissed:340,catchesMade:280},
+{playerName:"Quinton Bohanna",rushingYards:1670,touchDowns:780,sacks:950,goalsMade:980,goalsMissed:340,catchesMade:520},
+{playerName:"Earl Bostick Jr.",rushingYards:870,touchDowns:2670,sacks:1390,goalsMade:300,goalsMissed:390,catchesMade:1920},
+{playerName:"Jalen Brooks",rushingYards:900,touchDowns:2300,sacks:1400,goalsMade:1060,goalsMissed:360,catchesMade:820},
+{playerName:"Myles Brooks",rushingYards:1540,touchDowns:220,sacks:2910,goalsMade:1230,goalsMissed:330,catchesMade:3220},
+{playerName:"Jabril Cox",rushingYards:1234,touchDowns:2234,sacks:143,goalsMade:1435,goalsMissed:3343,catchesMade:2434},
+{playerName:"Tyler Coyle",rushingYards:1434,touchDowns:2054,sacks:153,goalsMade:1563,goalsMissed:356,catchesMade:632}]);
+
+
+
+3) Most Touchdowns
+  db.Players.find().sort({touchDowns:-1}).limit(1);
+
+4) Most Rushing Yards
+  db.Players.find().sort({rushingYards:-1}.limit(1);
+
+5) Least Rushing Yards
+  db.Players.find().sort({rushingYards:1}.limit(1);
+
+6)List of players sorted from most to few goals made
+   db.Players.find().sort({goalsMade:-1};
+7) Most Sacks
+ db.Players.find().sort({sacks:-1}.limit(1);
